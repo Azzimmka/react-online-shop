@@ -1,7 +1,7 @@
 import Header from "./components/Header";
 import Card from "./components/Card";
 import { createContext, useEffect, useReducer, type Dispatch } from "react";
-import { reducer, intialState } from "./utils/reducer";
+import { reducer, initialState } from "./utils/reducer";
 import type * as type from "./utils/types";
 import { apiCall } from "./utils/apiCall";
 
@@ -14,11 +14,11 @@ export const Context = createContext<ContextType | null>(null);
 
 
 function App() {
-  const [state, dispatch] = useReducer(reducer, intialState);
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(()=>{
     apiCall('/products', 'GET')
-    .then(response => response.data)
+    .then((response) => { return response.data })
     .then(products => {
       dispatch({
         type: 'SET_PRODUCTS',
@@ -29,7 +29,7 @@ function App() {
       console.error(error)
       dispatch({
         type: 'SET_PRODUCTS',
-        payload: error
+        payload: []
       })
   })
   }, [])

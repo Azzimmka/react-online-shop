@@ -17,14 +17,14 @@ export default function Card(){
             {products.map(product => (
                 <div key={product.id} className="flex flex-col p-3 gap-4 items-center w-87.5 border border-gray-400 rounded-2xl">
                     <img src={product.image} alt={product.title} />
-                    // Product Info
+
                     <div>
                         <p>{product.title}</p>
                         <p>Price: ${product.price}</p>
                     </div>
 
-                    // Product buttons
-                    <button onClick={() => dispatch({ type: 'TOGGLE_LIKE', payload: { productId: product.id }})} className="bg-gray-400 text-white p-3 rounded-40px cursor-pointer">❤️ {state.likes.includes(product.id) ? 'Liked' : 'Like'}</button>
+
+                    <button onClick={() => dispatch({ type: 'TOGGLE_LIKE', payload: { productId: product.id }})} className="bg-gray-400 text-white p-3 rounded-40px cursor-pointer">❤️ {state.likedIds.includes(product.id) ? 'Liked' : 'Like'}</button>
                     <button onClick={() => dispatch({ type: 'ADD_TO_CART', payload: { productId: product.id } })} className="bg-gray-400 text-white p-3 rounded-40px cursor-pointer">🛒 Add to cart</button>
                 </div>
                 

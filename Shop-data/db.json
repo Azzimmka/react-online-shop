@@ -4,14 +4,14 @@
       "id": 1,
       "title": "Headphones",
       "price": 100,
-      "image": "./img/png-1.png",
+      "image": "./img/png-1.webp",
       "category": "audio"
     },
     {
       "id": 2,
       "title": "Keyboard",
       "price": 60,
-      "image": "https://via.placeholder.com/200",
+      "image": "./img/png-1.webp",
       "category": "pc"
     }
   ]

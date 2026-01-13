@@ -14,7 +14,7 @@ export type CartItem = {
 export type State  ={
   products: Product[];
   cart: CartItem[];
-  likes: number[];
+  likedIds: number[];
   loading: boolean;
 }
 
