@@ -1,0 +1,18 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Headphones",
+      "price": 100,
+      "image": "./img/png-1.png",
+      "category": "audio"
+    },
+    {
+      "id": 2,
+      "title": "Keyboard",
+      "price": 60,
+      "image": "https://via.placeholder.com/200",
+      "category": "pc"
+    }
+  ]
+}
